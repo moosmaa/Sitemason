@@ -1,0 +1,379 @@
+/* 
+	Global 
+*/
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, input {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #333;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0 0 1em 0;
+}
+h1 {
+	line-height: 1.2;
+	margin: 0 0 .6em 0;
+}
+a {
+	color: #b70f22; /* Red */
+	cursor: pointer;
+}
+img {
+	max-width: 100%;
+	height: auto !important;
+	margin: 0 0 1em 0;
+}
+hr {
+	height: 1px;
+	border: none;
+	background: #eee;
+	margin: 1.5em 0;
+	clear: both;
+}
+.divider {
+	color: #eee;
+	padding: 0 .5em;
+}
+
+/* 
+	Clearfix 
+*/
+ .clearfix:before, .clearfix:after {
+	content:" ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+/* Structure */
+ .content {
+	margin: auto;
+	width: 100%;
+	max-width: 1280px;
+}
+.content-main {
+	width: 70%;
+	float: right;
+	padding: 2em;
+}
+.content-page {
+	width: auto;
+	float: none;
+}
+.content-sidebar {
+	width: 30%;
+	float: left;
+	padding: 2em;
+}
+
+
+/* 
+	Header 
+*/
+ .site-header {
+	padding: 1em 2em 0 2em;
+	background: #111;
+	position: relative;
+}
+.site-logo {
+	text-decoration: none;
+}
+.site-heading {
+	color: #fff;
+	float: left;
+	margin: 0;
+}
+.site-header .nav {
+	float: right;
+	margin: 1.125em 0 0 0;
+	position: relative;
+	clear: none;
+}
+.site-header .nav-link {
+	background: #333;
+	display: inline-block;
+	padding: .5em 1em;
+	color: #fff;
+	font-size: .95em;
+	border: none;
+	margin: 0;
+	text-decoration: none;
+}
+.site-header .nav-link:hover, .site-header .nav-link:active {
+	background: #666;
+}
+.site-header .nav-link-active, .site-header .nav-link-active:hover {
+	background: #fff;
+	color: #333;
+}
+.mobile-nav {
+	display: none;
+}
+
+
+/* 
+	Sidebar 
+*/
+ .widget {
+	padding: 0 0 1em 0;
+}
+.widget-title {
+	font-weight: bold;
+	display: block;
+	font-size: .9em;
+	margin: 0 0 .25em 0;
+}
+.nav {
+	clear: both;
+}
+.nav-link {
+	display: block;
+	font-size: .9em;
+	color: #333;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: .5em;
+	margin-bottom: -1px;
+	text-decoration: none;
+}
+.nav-link-active {
+	background: #b70f22;
+	color: #fff;
+	font-weight: bold;
+	border-color: #b70f22;
+	position: relative;
+}
+.widget-border-top {
+	border-top: 2px solid #eee;
+	padding-top: .75em;
+}
+.widget-search .form-text {
+	width: 73%;
+	min-width: 164px;
+}
+.widget-search .form-submit {
+	width: 23%;
+	min-width: 65px;
+}
+
+
+/*
+	Sidebar Nav
+*/
+
+.widget-nav { padding: 0 0 40px 0; }
+
+
+/* 
+	Sidebar News
+*/
+
+.widget-news ul { list-style-type: none; margin: 0; padding: 0; }
+.widget-news ul li { padding: 0 0 10px 0; }
+.widget-news ul li div.date { font-size: 0.7em; color: #555; }
+
+
+/* 
+	Footer 
+*/
+ .site-footer {
+	clear: both;
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	padding: 2em;
+}
+.content-footer {
+	padding: 1em 0;
+	border-top: 2px solid #eee;
+}
+.footer-copyright {
+	color: #fff;
+	font-size: .6em;
+	float: right;
+	color: #999;
+	text-transform: uppercase;
+}
+.footer-promo {
+	float: left;
+	font-size: .6em;
+}
+.footer-promo-link {
+	color: #999;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+/*
+	Presidents listing
+*/
+
+
+.presidents-list {
+	border-top: 1px solid #eee;
+	padding: 4px 0 0 0;
+	clear: both;
+}
+.filter .remove, .filter .remove a { padding: 0 0 10px 0; font-size: 0.7em; color: #666; }
+
+.presidents-thumb {
+	float: left;
+	margin: 0 1.5em 0 0;
+	padding: 0;
+	height: 75px;
+}
+.presidents-thumb img {
+	border: 1px solid #333;
+}
+
+.presidents-thumb-link:hover, .presidents-thumb-link:active {
+	background: none;
+}
+.presidents-title {
+	margin: 0;
+}
+.presidents-title-detail {
+	margin: 0 0 .3em 0;
+}
+.presidents-title-link {
+	color: #333;
+	text-decoration: none;
+}
+.presidents-title-link:hover {
+	color: #000;
+}
+
+.meta-label { color: #AAA; font-weight: 700; }
+.presidents-meta {
+	color: #666;
+	font-size: .75em;
+	margin: 0 0 1em 0;
+	position: relative;
+}
+.presidents-summary {
+	font-size: .9em;
+}
+.presidents-more {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: .75em;
+	text-transform: uppercase;
+}
+.presidents-share {
+	float: right;
+}
+
+
+/*
+	President detail
+*/
+
+.president-image { float: left; width: 320px; padding: 0 20px 0 0; }
+.president-data { float: left; margin: 0 0 340px 0; }
+.president-data ul { list-style: none; padding: 0; margin: 0; }
+.president-data ul li { padding: 4px 0; }
+.president-data .label { float: left; padding: 0 5px 0 0; width: 140px; color: #888; }
+.president-data .value { padding: 0 0 0 145px; }
+
+.president-content { clear: both; }
+
+
+/* 
+	Small Screens 
+*/
+.mobile-nav-icon {
+	display: none;
+}
+.desktop-hidden {
+	display: none;
+}
+
+@media screen and (max-width: 47em) {
+	span.desktop-hidden {
+		display: inline;
+	}
+	
+	/* 
+		Navigation 
+	*/
+	.mobile-nav-icon {
+		display: block;
+		color: #fff;
+		top: -.5em;
+		position: relative;
+		font-size: 1.3em;
+	}
+	.mobile-nav-icon:hover {
+		background: none;
+	}
+	.mobile-nav {
+		display: block;
+		position: absolute;
+		top: 2.5em;
+		right: 0;
+		opacity: 0;
+		transition: all 0.25s;
+		z-index: 9;
+	}
+	.mobile-nav-visible + .mobile-nav {
+		opacity: 1;
+		top: 1.5em;
+	}
+	.mobile-nav-visible + .mobile-nav a {
+		left: 0;
+	}
+	.mobile-nav-visible + .mobile-nav:before {
+		content:"";
+		position: absolute;
+		right: 5px;
+		top: -10px;
+		border: 5px solid transparent;
+		border-bottom-color: #f9f9f9;
+	}
+	.mobile-nav a {
+		display: block;
+		background: #f9f9f9;
+		padding: .5em 4em .5em .5em;
+		border-bottom: 1px solid #eee;
+		font-size: .9em;
+		position: relative;
+		left: -999px;
+	}
+	.mobile-nav a:hover {
+		background: #eee;
+	}
+	.site-header .nav-link {
+		display: none;
+	}
+	
+	
+	/* 
+		Structure 
+	*/
+	.content-main {
+		width: auto;
+		float: none;
+		padding: 1em;
+	}
+	.content-sidebar {
+		width: auto;
+		float: none;
+		padding: 0 1em;
+		clear: both;
+	}
+	.site-header {
+		padding: 1em;
+	}
+	.site-footer {
+		padding: 1em;
+	}
+	
+}
