@@ -198,8 +198,31 @@
                     ?>
                     </ul>
                 </nav>
+                
+                
             </div>
         </header>
+        
+        <!--Slider on Home Page-->
+        <?php if($smCurrentTool->getSlug() == 'home') : ?>
+            <section class="slider_wrapper page_width">
+                <section class="slider">
+                    <ul class="slides clearfix">
+                        <?php
+                            $sliderTool = $smCurrentSite->getToolWithSlug('slider');
+                            $sliderItems = $sliderTool->getItems();                            
+                            foreach($sliderItems as $sliderItem){
+                                $altURL = $sliderItem->getAlternateURL();
+                                $sliderImage = $sliderItem->getImage();
+                                $src =  $sliderImage->getURL();
+                                $alt = $sliderImage->getAlt();
+                                echo '<li><a href="'.$altURL.'" target="_blank" title="Slide Title 1"><img src="'.$src.'" alt="'.$alt.'" /></a></li>';
+                            }
+                        ?>
+                    </ul>
+                </section><!-- End of slider -->
+            </section><!-- End of slider wrapper -->
+        <?php endif; ?>
 
         <section role="main" class="content">
             <div class="content-main">
