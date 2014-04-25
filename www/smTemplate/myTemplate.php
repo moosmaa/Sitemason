@@ -223,6 +223,32 @@
                 </section><!-- End of slider -->
             </section><!-- End of slider wrapper -->
         <?php endif; ?>
+            
+        <section id="main_section_home">
+
+            <div class="page_width">
+
+                <div class="content_left">
+                    <h1 class="homepage">Lorem Ipsum Videntu</h1>
+
+                    <p>Autem exerci videntur mirum ea etiam. Lectores formas volutpat ea feugait litterarum. Quod imperdiet consuetudium decima typi fiant. Adipiscing duis putamus quod in videntur. Ii adipiscing illum legere nulla lobortis. Iriure ea ullamcorper ii tation et. </p>
+
+                    <div class="under_slider_button">
+                        <a href="#">read more</a>
+                    </div><!-- End of under slider button -->
+
+                </div><!-- End of content left -->
+
+                <div href="#" class="content_right">
+                    <img src="smTemplate/img/donate.png" alt="Raised so far $145,203. Donate today!">
+                </div><!-- End of content right -->
+
+                <div class="clear"></div>
+
+            </div><!-- End of page width -->
+
+        </section><!-- End of main section home -->
+        
 
         <section role="main" class="content">
             <div class="content-main">
@@ -276,6 +302,12 @@
 
                 ?>	
             </div>
+            <?php 
+                /*
+                 *  BLOG layout
+                 */
+                require_once('inc/layouts/blog.php'); 
+            ?>
 
             <div class="content-sidebar">
                 <?php 
