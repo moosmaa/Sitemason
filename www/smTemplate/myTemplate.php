@@ -99,18 +99,49 @@
             */
             $smCurrentTool->printHTMLHead();
 
-
+            
             /*
                 include this Site Template's CSS.  $smTemplateFolder is "/smTemplate" in this case,
                 because this template's path in config.json is "smTemplate/boilerplate.php"
             */
+            // demo css
             echo '<link rel="stylesheet" href="'. $smTemplateFolder .'/css/smBoilerplate.css">';
+            echo '<link rel="stylesheet" href="'. $smTemplateFolder .'/css/main-demo.css">';
+            // my project css
             echo '<link rel="stylesheet" href="'. $smTemplateFolder .'/css/main.css">';
-            echo '<link rel="stylesheet" href="'. $smTemplateFolder .'css/jquery.fancybox.css">';
-            echo '<link rel="stylesheet" media="print" href="'. $smTemplateFolder .'css/print.css">';
+            echo '<link rel="stylesheet" href="'. $smTemplateFolder .'/css/jquery.fancybox.css">';
+            echo '<link rel="stylesheet" media="print" href="'. $smTemplateFolder .'/css/print.css">';
 
             /* Google Fonts */
             echo '<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic">';
+            
+            /*
+             *  JS - Not sure if this should be at the tool level. Put here for now.
+             */
+            
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/jquery.js"> </script>';
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/jquery.easing.1.3.js"> </script>';
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/hoverIntent.js"> </script>';
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/respond.min.js"> </script>';
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/jquery.sfmenu.js"> </script>';
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/jquery.preloadcssimages.js"> </script>';
+            
+            // Page-specific JS
+            if($smCurrentTool->getSlug() == 'home'){
+                echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/jquery.flexslider-min.js"> </script>';
+                echo '<script type="text/javascript">
+                        jQuery(window).load(function() {
+                            jQuery(".slider").flexslider();
+                        });
+                    </script>';
+                
+            }else if($smCurrentTool->getSlug() == 'whoweare' || $smCurrentTool->getSlug() == 'whatwedo'){
+                echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/jquery.tweet.js"> </script>'; 
+            }
+            
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/responsive-menu-select.js"> </script>';
+            echo '<script type="text/javascript" src="'. $smTemplateFolder .'/js/twitter-feed.js"> </script>';
+            
         ?>
     </head>
 	
